@@ -5,28 +5,28 @@
 ### 1.1. Сети и маски
 
 1) Адрес сети 192.167.38.54/13 :
-![Адрес сети 192.167.38.54/13](/src/screenshots/1.1.1..png "Адрес сети 192.167.38.54/13")
+![Адрес сети 192.167.38.54/13](/screenshots/1.1.1..png "Адрес сети 192.167.38.54/13")
 
 2) Перевод маски 255.255.255.0 в префиксную и двоичную запись:
-![255.255.255.0](/src/screenshots/1.1.2.png " маскa 255.255.255.0 в префиксную и двоичную")
+![255.255.255.0](/screenshots/1.1.2.png " маскa 255.255.255.0 в префиксную и двоичную")
 /15 в обычную и двоичную - вызывает ошибку, так как ipcalc не работает с двоичными представлениями:
-![/15]( /src/screenshots/1.1.2(1).png "/15 в обычную и двоичную")
+![/15]( /screenshots/1.1.2(1).png "/15 в обычную и двоичную")
 11111111.11111111.11111111.11110000 в обычную и префиксную
-![11111111.11111111.11111111.11110000](/src/screenshots/1.1.2(2).png "11111111.11111111.11111111.11110000 в обычную и префиксную") - так же вызывает ошибку.
+![11111111.11111111.11111111.11110000](/screenshots/1.1.2(2).png "11111111.11111111.11111111.11110000 в обычную и префиксную") - так же вызывает ошибку.
 
 3) Минимальный и максимальный хост в сети 12.167.38.4 при масках: 
 
 - /8 
-![/8]( /src/screenshots/1.1.3(0).png "/8")
+![/8]( /screenshots/1.1.3(0).png "/8")
 
 - 11111111.11111111.00000000.00000000 
-![11111111.11111111.00000000.00000000](/src/screenshots/1.1.3(1).png "11111111.11111111.00000000.00000000")
+![11111111.11111111.00000000.00000000](/screenshots/1.1.3(1).png "11111111.11111111.00000000.00000000")
 
 - 255.255.254.0
-![255.255.254.0](/src/screenshots/1.1.3(2).png "255.255.254.0")
+![255.255.254.0](/screenshots/1.1.3(2).png "255.255.254.0")
 
 - /4
-![/4](/src/screenshots/1.1.3(3).png "/4")
+![/4](/screenshots/1.1.3(3).png "/4")
 
 
 
@@ -34,22 +34,22 @@
 
 Определить и записать в отчёт, можно ли обратиться к приложению, работающему на localhost, со следующими IP: 194.34.23.100, 127.0.0.2, 127.1.0.1, 128.0.0.1:
 
-![with loopback](/src/screenshots/1.2.png "with loopback")
+![with loopback](/screenshots/1.2.png "with loopback")
 
 
 К приложения на localhost c IP 127.0.0.2, 127.1.0.1 обратиться можно, поскольку у них есть закольцованность(loopback), к остальным обратиться не получится:
 
-![whitout loopback_1](/src/screenshots/1.2(1).png "whitout loopback_1")
+![whitout loopback_1](/screenshots/1.2(1).png "whitout loopback_1")
 
-![whitout loopback_2](/src/screenshots/1.2(2).png "whitout loopback_2")
+![whitout loopback_2](/screenshots/1.2(2).png "whitout loopback_2")
 
 ### 1.3. Диапазоны и сегменты сетей
 
 Определить:
 1) какие из перечисленных IP можно использовать в качестве публичного, а какие только в качестве частных: 
 10.0.0.45, 134.43.0.2, 192.168.4.2, 172.20.250.4, 172.0.2.1, 192.172.0.1, 172.68.0.2, 172.16.255.255, 10.10.10.10, 192.169.168.1. Понять, публичный IP или приватный позволяет последняя строчка вывода ipcalc:
-![privat](/src/screenshots/1.3.1(2).png "privat") либо 
-![public](/src/screenshots/1.3.1(1).png "public")
+![privat](/screenshots/1.3.1(2).png "privat") либо 
+![public](/screenshots/1.3.1(1).png "public")
 
 Следующие диапазоны адресов `зарезервированы` для частных (также известных как LAN) сетей:
 - 10.0.0.0 — 10.255.255.255 ( 10.0.0.0/8 ),
@@ -60,7 +60,7 @@
 2) какие из перечисленных IP адресов шлюза возможны у сети 10.10.0.0/18:
 
     Согласно выводу ipcalc минимальный хост - 10.10.0.1, максимальный - 10.10.63.254, значит возможны: 10.10.0.2, 10.10.10.10.
-![сеть 10.10.0.0/18](/src/screenshots/1.1.3.2.png "сеть 10.10.0.0/18")
+![сеть 10.10.0.0/18](/screenshots/1.1.3.2.png "сеть 10.10.0.0/18")
 
   Таким образом, `ipcalc` это утилита, которая может выполнять простые манипуляции с IPv4-адресами.
 ___________________________
@@ -69,42 +69,42 @@ ___________________________
 ___________________________________
 
 Поднимаю 2 виртуальные машины и с помощью `ip a` получаю информацию о существующих сетевых инерфейсах:
-![ws1 ip a](/src/screenshots/2.0.0%C2%A0%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png "ws1 ip a")
+![ws1 ip a](/screenshots/2.0.0%C2%A0%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png "ws1 ip a")
 В настройках VirtualBox для каждой машины добвляю по адаптеру и выбираю тип подключения: Внутренняя сеть
-![ws2 ip a](/src/screenshots/2.0.1.png "ws2 ip a")
+![ws2 ip a](/screenshots/2.0.1.png "ws2 ip a")
 
 Задаю статические адреса для обеих машин в файле etc/netplan/00-installer-config.yaml:
 
-![ws1_yaml.png](/src/screenshots/2.0_ws1_yaml.png "ws1_yaml.png")
-![ws2_yaml](/src/screenshots/2.0_ws2_yaml.png "ws2_yaml")
+![ws1_yaml.png](/screenshots/2.0_ws1_yaml.png "ws1_yaml.png")
+![ws2_yaml](/screenshots/2.0_ws2_yaml.png "ws2_yaml")
 UPD: для интерфейсов enp0s8 обеих машин добавлена строка dhcp4: false
 
 Принимаю изменения и проверяю, сохранились ли:
-![ws1_netplan_app](/src/screenshots/2.0_ws1_netplan_app.png "ws1_netplan_app")
+![ws1_netplan_app](/screenshots/2.0_ws1_netplan_app.png "ws1_netplan_app")
 
-![ws2_netplan_app](/src/screenshots/2.0_ws2_netplan_app.png "ws2_netplan_app")
+![ws2_netplan_app](/screenshots/2.0_ws2_netplan_app.png "ws2_netplan_app")
 
 ### 2.1. Добавление статического маршрута вручную
 
 Добавить статический маршрут от одной машины до другой и обратно при помощи команды ip r add:
-![ip_r_add_ws1](/src/screenshots/2.1.ip_r_add_ws1.png "ip_r_add_ws1")
-![ip_r_add_ws2](/src/screenshots/2.1.ip_r_add_ws2.png "ip_r_add_ws2")
+![ip_r_add_ws1](/screenshots/2.1.ip_r_add_ws1.png "ip_r_add_ws1")
+![ip_r_add_ws2](/screenshots/2.1.ip_r_add_ws2.png "ip_r_add_ws2")
 
 Проверка соединения ping:
-![ping_ws1](/src/screenshots/2.1.ping_ws1.png "ping_ws1")
-![ping_ws2](/src/screenshots/2.1.ping_ws2.png "ping_ws2")
+![ping_ws1](/screenshots/2.1.ping_ws1.png "ping_ws1")
+![ping_ws2](/screenshots/2.1.ping_ws2.png "ping_ws2")
 
 ### 2.2. Добавление статического маршрута с сохранением
 
 После команды sudo reboot все связи, настроенные через `ip r add`, между машинами нарушаются.
 Добавить статический маршрут от одной машины до другой с помощью файла `etc/netplan/00-installer-config.yaml` :
 
-![2.2.yaml_ws1](/src/screenshots/2.2.yaml_ws1.png "2.2.yaml_ws1")
-![2.2.yaml_ws2](/src/screenshots/2.2.yaml_ws2.png "2.2.yaml_ws2")
+![2.2.yaml_ws1](/screenshots/2.2.yaml_ws1.png "2.2.yaml_ws1")
+![2.2.yaml_ws2](/screenshots/2.2.yaml_ws2.png "2.2.yaml_ws2")
 
 Проверка соединения успешна:
-![2.2.ping_ws1](/src/screenshots/2.2.ping_ws1.png "2.2.ping_ws1")
-![2.2.ping_ws2](/src/screenshots/2.2.ping_ws2.png "2.2.ping_ws2")
+![2.2.ping_ws1](/screenshots/2.2.ping_ws1.png "2.2.ping_ws1")
+![2.2.ping_ws2](/screenshots/2.2.ping_ws2.png "2.2.ping_ws2")
 ___________________________
 ___________________________
 
@@ -119,8 +119,8 @@ ___________________________
 ### 3.2. Утилита iperf3
 
 Измерить скорость соединения между ws1 и ws2
-![iperf3_ws1](/src/screenshots/3.2.iperf3_ws1.png "iperf3_ws1")
-![iperf3_ws2](/src/screenshots/3.2.iperf3_ws2.png "iperf3_ws2")
+![iperf3_ws1](/screenshots/3.2.iperf3_ws1.png "iperf3_ws1")
+![iperf3_ws2](/screenshots/3.2.iperf3_ws2.png "iperf3_ws2")
 ___________________________
 ___________________________
 
@@ -132,18 +132,18 @@ ___________________________
 
 `iptables` — это утилита брандмауэра командной строки, которая использует цепочки политик для разрешения или блокировки трафика. Когда соединение пытается установиться в вашей системе, iptables ищет правило в своем списке, чтобы сопоставить его. Если он не находит его, он прибегает к действию по умолчанию.
 
-![4.1.firewall_ws1](/src/screenshots/4.1.firewall_ws1.png "4.1.firewall_ws1")
-![4.1.firewall_ws2](/src/screenshots/4.1.firewall_ws2.png "4.1.firewall_ws2")
+![4.1.firewall_ws1](/screenshots/4.1.firewall_ws1.png "4.1.firewall_ws1")
+![4.1.firewall_ws2](/screenshots/4.1.firewall_ws2.png "4.1.firewall_ws2")
 
-![4.1.screen](/src/screenshots/4.1.screen.png "4.1.screen")
+![4.1.screen](/screenshots/4.1.screen.png "4.1.screen")
 
 Если `запрещающее правило` стоит первым, оно не перезаписывается правилом разрешения.
 
 ### 4.2. Утилита nmap
 
-![4.2.ping](/src/screenshots/4.2.ping_loss.png "4.2.ping")
+![4.2.ping](/screenshots/4.2.ping_loss.png "4.2.ping")
 
-![nmap](/src/screenshots/4.2.NMAP.png "nmap")
+![nmap](/screenshots/4.2.NMAP.png "nmap")
 
 ## Part 5. Статическая маршрутизация сети
 
@@ -153,28 +153,28 @@ ___________________________
 
 Настроить конфигурации машин в etc/netplan/00-installer-config.yaml согласно сети на рисунке:
 
-![part5_network](/src/screenshots/part5_network.png "part5_network")
+![part5_network](/screenshots/part5_network.png "part5_network")
 
 .уaml файлы для каждой машины:
-![5.1.ws11_yaml](/src/screenshots/5.1.ws11_yaml.png "5.1.ws11_yaml")
-![5.1.ws21_yaml](/src/screenshots/5.1.ws21_yaml.png "5.1.ws21_yaml")
-![5.1.ws22_yaml](/src/screenshots/5.1.ws22_yaml.png "5.1.ws22_yaml")
-![5.1.r1_yaml](/src/screenshots/5.1.r1_yaml.png "5.1.r1_yaml")
-![5.1.r2_yaml](/src/screenshots/5.1.r2_yaml.png "5.1.r2_yaml")
+![5.1.ws11_yaml](/screenshots/5.1.ws11_yaml.png "5.1.ws11_yaml")
+![5.1.ws21_yaml](/screenshots/5.1.ws21_yaml.png "5.1.ws21_yaml")
+![5.1.ws22_yaml](/screenshots/5.1.ws22_yaml.png "5.1.ws22_yaml")
+![5.1.r1_yaml](/screenshots/5.1.r1_yaml.png "5.1.r1_yaml")
+![5.1.r2_yaml](/screenshots/5.1.r2_yaml.png "5.1.r2_yaml")
 
 Перезапустить сервис сети. Если ошибок нет, то командой ip -4 a проверить, что адрес машины задан верно
 Также пропинговать ws22 с ws21. 
-![5.1.ip_-4_a_and_ping_ws22](/src/screenshots/5.1.ip_-4_a_and_ping_ws22.png "5.1.ip_-4_a_and_ping_ws22")
+![5.1.ip_-4_a_and_ping_ws22](/screenshots/5.1.ip_-4_a_and_ping_ws22.png "5.1.ip_-4_a_and_ping_ws22")
 Аналогично пропинговать r1 с ws11
-![5.1.ping_eth0](/src/screenshots/5.1.ping_eth0.png "5.1.ping_eth0")
+![5.1.ping_eth0](/screenshots/5.1.ping_eth0.png "5.1.ping_eth0")
 
 ### 5.2. Включение переадресации IP-адресов
 
 Для включения переадресации IP, выполните команду на роутерах:
 sysctl -w net.ipv4.ip_forward=1 (При таком подходе переадресация не будет работать после перезагрузки системы)
-![5.2.sysctl_r1](/src/screenshots/5.2.sysctl_r1.png "5.2.sysctl_r1")
-![5.2.sysctl_r2](/src/screenshots/5.2.sysctl_r2.png "5.2.sysctl_r2")
+![5.2.sysctl_r1](/screenshots/5.2.sysctl_r1.png "5.2.sysctl_r1")
+![5.2.sysctl_r2](/screenshots/5.2.sysctl_r2.png "5.2.sysctl_r2")
 
 Откройте файл /etc/sysctl.conf и добавьте в него следующую строку:
 
-<!-- ![](/src/screenshots/.png "") -->
+<!-- ![](/screenshots/.png "") -->
